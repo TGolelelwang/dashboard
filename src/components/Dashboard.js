@@ -1,23 +1,21 @@
 import React from 'react'
+import {Routes, Route} from 'react-router-dom'
 import NewsWidget from "./NewsWidget";
 import WeatherWidget from "./WeatherWidget";
+import Navbar from './NavBar';
+// import NavBar from './NavBar';
 
 
 function Dashboard() {
   return (
-    <div>
-        <div className = "dashboard">
-          <div className= "widgets">
-          <div className = "weather-content">
-              <WeatherWidget/>
-            </div>
-
-            <div className = "news-content">
-              <NewsWidget/>
-            </div>
-          </div>
-            
-        </div>
+    <div className="dashboard">
+       <Navbar /> 
+      <div className="content">
+        <Routes>
+          <Route path="/" element={<WeatherWidget />} />
+          <Route path="/news" element={<NewsWidget />} />
+        </Routes>
+      </div>
     </div>
   );
 }

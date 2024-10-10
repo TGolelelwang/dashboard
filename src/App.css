@@ -29,3 +29,35 @@
 .card-title{
   font-size: 21px;
 }
+
+/*Side Bar   */
+.dashboard {
+  display: flex;
+}
+
+.side-bar {
+  width: 240px;
+  background: rgb(90, 186, 224);
+  height: 100vh;
+  padding: 20px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style-type: none;
+  margin: 20px 0;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+}
