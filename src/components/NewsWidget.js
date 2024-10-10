@@ -34,7 +34,6 @@ function NewsWidget() {
 
   return (
     <div>
-      <p>News Widget</p>
       {newsArticles.slice(0, 5).map((article, index) => ( // Limit to 6 articles
         <Card
           key={index}
