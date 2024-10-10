@@ -33,8 +33,8 @@ function NewsWidget() {
   }
 
   return (
-    <div>
-      {newsArticles.slice(0, 5).map((article, index) => ( // Limit to 6 articles
+    <div className ="news-grid">
+      {newsArticles.slice(0, 3).map((article, index) => ( // Limit to 6 articles
         <Card
           key={index}
           imgSrc={article.urlToImage || 'https://via.placeholder.com/150'}

@@ -1,3 +1,25 @@
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+  gap: 20px; /* Space between the cards */
+  padding: 20px;
+}
+
+/* Adjust the grid for medium screens (2 cards per row) */
+@media (max-width: 1024px) {
+  .news-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Adjust for smaller screens (1 card per row) */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* The existing .card styles */
 .card {
   border: 2px solid rgb(150, 186, 219);
   border-radius: 10px;
