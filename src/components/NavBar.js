@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Navbar() {
+function Sidebar() {
   return (
     <div className="side-bar">
       <ul>
@@ -16,4 +16,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default Sidebar;
