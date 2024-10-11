@@ -16,7 +16,7 @@ function Menu({active, setActive, setTopic}){
     }
 
     return(
-        <nav calssName ="menu">
+        <nav className ="menu">
             <ul>
                 {links.map(link =>(
                     <li
