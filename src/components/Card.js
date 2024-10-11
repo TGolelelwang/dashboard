@@ -1,13 +1,13 @@
-import React from 'react'
-function Card({imgSrc, title, desc}) {
+import React from 'react';
+
+function Card({ imgSrc, title, desc, link }) {
     return (
-      <div className = "card">
-            <img src ={imgSrc} className ="card-img" alt ="Picture of the current news title">
-            </img>
-            <h2 className= "card-title">{title}</h2>
-            <p className= "card-para"> {desc}</p>
-      </div>
+        <a href={link} target="_blank" rel="noopener noreferrer" className="card">
+            <img src={imgSrc} className="card-img" alt="Picture of the current news title" />
+            <h2 className="card-title">{title}</h2>
+            <p className="card-para">{desc}</p>
+        </a>
     );
-  }
-  
-  export default Card;
+}
+
+export default Card;

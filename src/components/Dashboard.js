@@ -3,10 +3,12 @@ import {Routes, Route} from 'react-router-dom'
 import NewsWidget from "./NewsWidget";
 import WeatherWidget from "./WeatherWidget";
 import Navbar from './NavBar';
-// import NavBar from './NavBar';
+
 
 
 function Dashboard() {
+
+  
   return (
     <div className="dashboard">
        <Navbar /> 

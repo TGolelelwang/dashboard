@@ -1,49 +1,25 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
-import Card from './Card';
-
+import Menu from './Menu'
+import NewsGrid from './NewsGrid'
 function NewsWidget() {
-  const [newsArticles, setNewsArticles] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  
+  const [items, setItems] = useState([])
+  const [active, setActive] = useState(1)
+  const [topic, setTopic] = useState("general") //topic that of the news that will be displayed
+  
+  useEffect(()=>{
 
-  useEffect(() => {
-    const fetchNews = async () => {
-      try {
-        const response = await axios.get(
-          `https://newsapi.org/v2/everything?q=soccer&apiKey=1c618b6b4bc4400daa2e07b00e2e834a`
-        );
-        setNewsArticles(response.data.articles);
-        setLoading(false);
-      } catch (err) {
-        setError(err.message);
-        setLoading(false);
-      }
-    };
+    fetch (`https://newsapi.org/v2/everything?q=${topic}&apiKey=1c618b6b4bc4400daa2e07b00e2e834a`)
+    .then(res => res.json())
+    .then (data => setItems(data.articles))
+  }, [topic])
 
-    fetchNews();
-  }, []);
-
-  if (loading) {
-    return <p>Loading news...</p>;
-  }
-
-  if (error) {
-    return <p>Error loading news: {error}</p>;
-  }
-
-  return (
-    <div className ="news-grid">
-      {newsArticles.slice(0, 3).map((article, index) => ( // Limit to 6 articles
-        <Card
-          key={index}
-          imgSrc={article.urlToImage || 'https://via.placeholder.com/150'}
-          title={article.title}
-          desc={article.description}
-        />
-      ))}
-    </div>
-  );
+    return (
+        <div className="news-grid">
+          <Menu active = {active} setActive ={setActive} setTopic={setTopic}/>
+          <NewsGrid items ={items}/>
+        </div>
+    );
 }
 
 export default NewsWidget;
