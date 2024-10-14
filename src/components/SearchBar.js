@@ -3,7 +3,7 @@ function SearchBar() {
   return (
       <div className = "searchbar">
           <form>
-              <input>
+              <input type= "text">
               
               </input>
           </form>

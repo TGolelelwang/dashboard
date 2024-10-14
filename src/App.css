@@ -25,12 +25,13 @@
 
 .menu li{
   display: inline-block;
-  margin: 1em;
-  font-size: 1.2em;
+  margin: 0.5em;
+  font-size: 1em;
   padding: 0.5em 1em;
   border-radius: 3em;
   cursor: pointer;
   transition: 0.3s;
+   
 }
 
 .menu .inactive{
