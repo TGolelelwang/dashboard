@@ -65,8 +65,8 @@
   display: flex;
   flex-direction: column;
   background: whitesmoke;
-  box-shadow: 0 0 10px rgba (0,0,0 .2);
-  width: 25em;
+  box-shadow: 0 0 10px rgba (0,0,0 2);
+  max-width: 25em;
   border-radius: 8px;
   overflow: hidden;
   text-decoration: none;
@@ -128,9 +128,10 @@
 
 }
 
+/* RESPONSIVE */
 @media screen and (max-wdith: 1330px){
   html{
-    font-size: 14px
+    font-size: 14px;
   }
 
   .news-grid{
@@ -140,8 +141,9 @@
 
 @media screen and (max-width:900px)
 {
-  .newsgrid{
+  .news-grid{
     grid-template-columns: 1fr;
+    padding: 1em;
   }
 }
 
@@ -155,7 +157,7 @@
 }
 
 .side-bar {
-  width: 120px;
+  width: 160px;
   background: rgb(90, 186, 224);
   height: 100vh;
   padding: 20px;
@@ -180,4 +182,8 @@ li a {
   text-decoration: none;
   color: white;
   font-size: 18px;
+}
+
+li a:hover {
+  color: salmon;
 }
