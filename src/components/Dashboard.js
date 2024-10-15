@@ -9,7 +9,7 @@ function Dashboard() {
   
   return (
     <div className="dashboard">
-       {/* <Navbar />  */}
+      <Navbar />
       <div className="content">
         <Routes>
           <Route path="/" element={<WeatherWidget />} />

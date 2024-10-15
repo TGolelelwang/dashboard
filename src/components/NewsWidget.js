@@ -15,7 +15,7 @@ function NewsWidget() {
   }, [topic])
 
     return (
-        <div className="news-grid">
+        <div className="news-widget">
           <Menu active = {active} setActive ={setActive} setTopic={setTopic}/>
           <NewsGrid items ={items}/>
         </div>
