@@ -3,8 +3,6 @@ function NewsItem({item}){
 
    const websiteUrl = item.url
    const website = websiteUrl.split('https://').pop().split('/')[0]
-   const date = item.publishedAt
-   const formatDate = date.replace('T','')
 
    return(
     <a href = {item.url} className= "article">
