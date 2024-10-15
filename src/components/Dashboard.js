@@ -2,7 +2,7 @@ import React from 'react'
 import {Routes, Route} from 'react-router-dom'
 import NewsWidget from "./NewsWidget";
 import WeatherWidget from "./WeatherWidget";
-// import Navbar from './NavBar';
+import Navbar from './NavBar';
 
 
 

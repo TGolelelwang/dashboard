@@ -605,16 +605,11 @@ body {
   height: 100vh;
 }
 
-.search-bar{
-  display: flex;
-}
-
 .side-bar {
-  width: 210px;
+  width: 160px;
   background: rgb(90, 186, 224);
   height: 100vh;
-  padding: 10px;
-  padding-top: 20px;
+  padding: 20px;
 }
 
 .content {
