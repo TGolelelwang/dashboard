@@ -38,7 +38,7 @@ function DayForecast({ location }) {
  
   return (
     <div className="forecast-container">
-      <h3>5-Day Forecast</h3>
+      <h3>5 Day Forecast</h3>
       <div className="forecast-grid">
         {forecastItems.map(item => (
           <div key={item.dt} className="forecast-item">
