@@ -4,8 +4,6 @@ import NewsWidget from "./NewsWidget";
 import WeatherWidget from "./WeatherWidget";
 import Navbar from './NavBar';
 
-
-
 function Dashboard() {
 
   
